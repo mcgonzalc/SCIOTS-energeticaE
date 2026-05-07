@@ -3,7 +3,7 @@ import { createEnergetica } from "../services/energeticaService.js";
 import { publicKey, privateKey } from "../utils/keyGenerator.js";
 import * as rsa from "../middleware/rsa.js";
 
-export const createEnergeticaHandler = async (req: Request, res: Response) => {
+export const getDataAgregadorHandler = async (req: Request, res: Response) => {
     try {
         const encryptedC = BigInt(req.body.c);
         const decryptedC = privateKey.decrypt(encryptedC);

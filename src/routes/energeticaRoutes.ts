@@ -21,7 +21,7 @@ const router = Router();
  *               c:
  *                 type: integer
  *     responses:
- *       200:
+ *       201:
  *         description: Number decrypted succesfully
  *         content:
  *           application/json:
@@ -33,7 +33,7 @@ const router = Router();
  *       500:
  *         description: Internal server error
  */
-router.post('/data', energeticaController.createEnergeticaHandler);
+router.post('/data', energeticaController.getDataAgregadorHandler);
 
 /**
  * @openapi
